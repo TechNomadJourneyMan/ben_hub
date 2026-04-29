@@ -158,7 +158,7 @@ function BenFooter() {
   return (
     <footer className="ben-footer">
       <div className="ben-container footer-inner">
-        <img src="uploads/лого ben1.png" alt="BEN" className="footer-logo"/>
+        <img src="uploads/лого ben1.jpeg" alt="BEN" className="footer-logo"/>
         <span className="footer-copy">{T.footer.copy}</span>
         <div className="footer-links">
           <a href="#">{T.footer.privacy}</a>

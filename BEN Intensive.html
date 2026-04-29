@@ -88,8 +88,8 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; back
 /* Sticky Header */
 .sticky-header { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border); transition: transform .4s, opacity .4s, background .3s; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 14px; }
-.header-logo { height: 26px; }
-[data-theme="light"] .header-logo { filter: invert(1) brightness(0.4) saturate(2) hue-rotate(220deg); }
+.header-logo { height: 32px; mix-blend-mode: multiply; }
+[data-theme="dark"] .header-logo { mix-blend-mode: screen; filter: invert(1); }
 .header-center { display: flex; align-items: center; gap: 18px; }
 .header-seats { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--dim); font-weight: 500; }
 .header-timer-text { font-size: 13px; color: var(--orange); font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: .3px; }
@@ -424,8 +424,8 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; back
 /* Footer */
 .ben-footer { border-top: 1px solid var(--border); padding: 28px 0; background: var(--bg2); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-.footer-logo { height: 22px; opacity: 0.7; }
-[data-theme="light"] .footer-logo { filter: invert(1) brightness(0.3) saturate(2) hue-rotate(220deg); }
+.footer-logo { height: 28px; mix-blend-mode: multiply; }
+[data-theme="dark"] .footer-logo { mix-blend-mode: screen; filter: invert(1); }
 .footer-copy { font-size: 13px; color: var(--muted); }
 .footer-links { display: flex; gap: 20px; }
 .footer-links a { font-size: 13px; color: var(--muted); transition: color .2s; }
@@ -505,7 +505,7 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; back
 
   /* Sticky header — logo + pay only */
   .header-inner { height: 52px; gap: 8px; }
-  .header-logo { height: 22px; }
+  .header-logo { height: 26px; }
   .header-center { display: none; }
   .header-actions .btn-ghost { display: none; }
   .header-actions { gap: 6px; }
@@ -759,7 +759,7 @@ function _REMOVED_StickyHeaderV3({ onCTA, theme, onToggleTheme }) {
   return (
     <header className="sticky-header" style={{ transform: show ? 'translateY(0)' : 'translateY(-100%)', opacity: show ? 1 : 0 }}>
       <div className="ben-container header-inner">
-        <img src="uploads/лого ben1.png" alt="BEN" className="header-logo"/>
+        <img src="uploads/лого ben1.jpeg" alt="BEN" className="header-logo"/>
         <div className="header-center">
           <span className="header-seats"><span className="seats-dot"></span>Осталось {seats.left} мест</span>
           <span className="header-timer-text">{pad(countdown.d)}д {pad(countdown.h)}:{pad(countdown.m)}:{pad(countdown.s)}</span>
@@ -977,7 +977,6 @@ function AppInner() {
       <OfferSectionV3 onCTA={() => setQOpen(true)}/>
       <FourDaysSection onCTA={() => setQOpen(true)}/>
       <FAQSection/>
-      <FinalCTA onCTA={() => setQOpen(true)}/>
       <BenFooter/>
       <Questionnaire open={qOpen} onClose={() => setQOpen(false)}/>
       <BenTweaksPanel tweaks={tweaks} setTweak={setTweak}/>
