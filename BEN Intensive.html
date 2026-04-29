@@ -289,6 +289,58 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; back
 .comp-x { color: var(--red); font-weight: 700; flex-shrink: 0; }
 .comp-ok { color: var(--green); font-weight: 700; flex-shrink: 0; }
 
+/* Program Scheme (new) */
+.prog-scheme { display: grid; grid-template-columns: .48fr 1fr; gap: 28px; align-items: start; }
+.prog-scheme-photo-wrap { border-radius: var(--r-xl); overflow: hidden; position: relative; box-shadow: 0 24px 64px rgba(0,0,0,.22); }
+.prog-scheme-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; display: block; }
+.prog-scheme-photo-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(10,14,40,.97) 0%, rgba(10,14,40,.6) 60%, transparent 100%); padding: 24px 20px 20px; }
+.prog-scheme-expert-label { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: .12em; color: rgba(255,255,255,.6); margin-bottom: 4px; font-weight: 700; }
+.prog-scheme-expert-badge strong { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: #fff; }
+.prog-scheme-expert-badge span { font-size: 12px; color: rgba(255,255,255,.75); }
+.prog-scheme-stats { display: flex; gap: 10px; margin-top: 12px; }
+.prog-scheme-stat { flex: 1; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15); border-radius: 8px; padding: 8px 10px; text-align: center; }
+.prog-scheme-stat-val { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; color: var(--orange); line-height: 1; }
+.prog-scheme-stat-lbl { display: block; font-size: 10px; color: rgba(255,255,255,.65); margin-top: 3px; line-height: 1.3; }
+.prog-scheme-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.prog-scheme-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 20px; border-top: 3px solid var(--pc); box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px; }
+.prog-scheme-card-head { display: flex; align-items: center; gap: 10px; }
+.prog-scheme-card-icon { width: 38px; height: 38px; border-radius: 9px; background: color-mix(in srgb, var(--pc) 14%, transparent); color: var(--pc); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.prog-scheme-card-icon svg { width: 18px; height: 18px; }
+.prog-scheme-card-label { font-size: 14px; font-weight: 800; color: var(--text); letter-spacing: .04em; }
+.prog-scheme-card-sub { font-size: 11px; color: var(--dim); text-transform: uppercase; letter-spacing: .06em; margin-top: 1px; }
+.prog-scheme-card-num { margin-left: auto; font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: color-mix(in srgb, var(--pc) 25%, transparent); line-height: 1; }
+.prog-scheme-card-items { list-style: none; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.prog-scheme-card-items li { display: flex; gap: 8px; font-size: 13px; color: var(--text-2); line-height: 1.4; }
+.prog-scheme-card-items li span { flex-shrink: 0; font-weight: 700; }
+.prog-scheme-card-result { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 600; color: var(--pc); background: color-mix(in srgb, var(--pc) 9%, transparent); border: 1px solid color-mix(in srgb, var(--pc) 20%, transparent); border-radius: 8px; padding: 7px 10px; }
+.prog-scheme-card-result svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+/* Roadmap chain */
+.roadmap-section { padding: 80px 0 64px; background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.roadmap-header { display: flex; align-items: flex-start; gap: 24px; margin-bottom: 56px; }
+.roadmap-big-num { font-family: 'Space Grotesk', sans-serif; font-size: 120px; font-weight: 800; line-height: .85; background: linear-gradient(135deg, var(--indigo), var(--orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; flex-shrink: 0; }
+.roadmap-header-body { padding-top: 16px; }
+.roadmap-title { font-family: var(--font-display); font-size: clamp(22px, 2.8vw, 34px); font-weight: 800; color: var(--text); text-transform: var(--display-transform); margin-bottom: 8px; line-height: 1.2; }
+.roadmap-sub { font-size: 16px; color: var(--text-2); line-height: 1.6; }
+.roadmap-chain { display: flex; align-items: center; justify-content: center; padding: 56px 0; overflow-x: auto; }
+.roadmap-node { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; width: 128px; }
+.roadmap-node-label { font-size: 13px; font-weight: 600; color: var(--text-2); text-align: center; line-height: 1.3; min-height: 44px; display: flex; align-items: center; justify-content: center; padding: 0 6px; }
+.roadmap-node-label.top { order: -1; margin-bottom: 14px; }
+.roadmap-node-label.bottom { order: 1; margin-top: 14px; }
+.roadmap-node-label--day { font-size: 10px; color: var(--dim); font-weight: 500; text-transform: uppercase; letter-spacing: .07em; min-height: 32px; }
+.roadmap-circle { width: 76px; height: 76px; border-radius: 50%; border: 3px solid var(--rc); background: var(--bg-card); box-shadow: 0 0 0 7px color-mix(in srgb, var(--rc) 12%, transparent); display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; transition: transform .2s, box-shadow .2s; cursor: default; order: 0; }
+.roadmap-circle:hover { transform: scale(1.1); box-shadow: 0 0 0 10px color-mix(in srgb, var(--rc) 18%, transparent); }
+.roadmap-circle-inner { color: var(--rc); }
+.roadmap-circle-inner svg { width: 24px; height: 24px; }
+.roadmap-circle-num { position: absolute; top: -5px; right: -5px; width: 22px; height: 22px; border-radius: 50%; background: var(--rc); color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; }
+.roadmap-connector { display: flex; align-items: center; flex: 1; min-width: 32px; max-width: 64px; position: relative; margin-top: 0; }
+.roadmap-line { height: 3px; width: 100%; border-radius: 2px; }
+.roadmap-arrow { position: absolute; right: -8px; font-size: 16px; color: var(--text-2); line-height: 1; }
+.roadmap-result-node { display: flex; flex-direction: column; align-items: center; width: 96px; margin-left: 6px; }
+.roadmap-result-circle { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--indigo), var(--orange)); display: flex; align-items: center; justify-content: center; color: #fff; box-shadow: 0 8px 24px color-mix(in srgb, var(--orange) 30%, transparent); }
+.roadmap-result-circle svg { width: 28px; height: 28px; }
+.roadmap-result-label { font-size: 11px; font-weight: 700; color: var(--text); text-align: center; line-height: 1.4; margin-top: 10px; }
+
 /* Expert */
 .expert-grid { display: grid; grid-template-columns: .65fr 1fr; gap: 56px; align-items: center; }
 .expert-img-wrap { border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow); }
@@ -524,6 +576,15 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; back
   .comp-col-ben { background: transparent; border-left: none; border-top: 1px solid color-mix(in srgb, var(--green) 25%, transparent); padding-top: 6px !important; }
 
   /* Expert */
+  .prog-scheme { grid-template-columns: 1fr; }
+  .prog-scheme-photo-wrap { max-height: 320px; overflow: hidden; }
+  .prog-scheme-photo { aspect-ratio: 4/3; }
+  .prog-scheme-cards { grid-template-columns: 1fr; }
+  .roadmap-chain { justify-content: flex-start; padding: 40px 0; }
+  .roadmap-node { width: 100px; }
+  .roadmap-node-label { font-size: 12px; min-height: 36px; }
+  .roadmap-circle { width: 60px; height: 60px; }
+  .roadmap-big-num { font-size: 80px; }
   .expert-grid { grid-template-columns: 1fr; gap: 24px; }
   .expert-photo-col { order: -1; max-width: 260px; margin: 0 auto; }
   .expert-name { font-size: 26px; }
@@ -908,6 +969,7 @@ function AppInner() {
       <ChecklistSection onCTA={() => setQOpen(true)}/>
       <ParticipantOfferBlock/>
       <ProgramSection/>
+      <BenRoadmapSection/>
       <QuoteDivider text={T.quotes.q2}/>
       <ExpertSection/>
       <QuoteDivider text={T.quotes.q3}/>
