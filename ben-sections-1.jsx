@@ -54,7 +54,7 @@ function HeroSectionV3({ onCTA }) {
             <div className="hero-block hero-block-cta">
               <FadeIn delay={0.22}>
                 <div className="hero-cta-block">
-                  <button onClick={onCTA} className="btn-orange btn-lg hero-btn">{T.hero.cta} <Icons.ArrowRight/></button>
+                  <button onClick={onCTA} className="btn-orange hero-btn hero-btn-xl">{T.hero.cta} <Icons.ArrowRight/></button>
                   <span className="hero-cta-sub">{T.hero.ctaSub}</span>
                 </div>
               </FadeIn>
@@ -106,7 +106,7 @@ function BenSystemSection() {
       <FadeIn>
         <div style={{textAlign:'center', marginBottom: 40}}>
           <span className="section-label">{T.program.label}</span>
-          <h2 className="section-title">{T.hero.h1c} <span style={{color:'var(--orange)'}}>{T.hero.h1d}</span></h2>
+          <h2 className="section-title">{T.hero.h1c}<br/><span style={{color:'var(--orange)'}}>{T.hero.h1d}</span></h2>
         </div>
       </FadeIn>
       <div className="bensys-grid">
@@ -167,12 +167,16 @@ function ParticipantOfferBlock() {
       <div className="ben-container">
         <FadeIn>
           <div className="participant-offer-card">
-            <div className="participant-offer-icon">
-              <Icons.Gift/>
+            <div className="participant-offer-img-wrap">
+              <img src="uploads/gift-client-base.png" alt={T.participantOffer.desc} className="participant-offer-img" loading="lazy"/>
             </div>
             <div className="participant-offer-body">
-              <div className="participant-offer-title">{T.participantOffer.title}</div>
+              <div className="participant-offer-badge"><Icons.Gift/> {T.participantOffer.title}</div>
               <div className="participant-offer-desc">{T.participantOffer.desc}</div>
+              <div className="participant-offer-pricing">
+                <span className="participant-offer-free">Бесплатно</span>
+                <s className="participant-offer-old-price">280 000 ₸</s>
+              </div>
             </div>
           </div>
         </FadeIn>

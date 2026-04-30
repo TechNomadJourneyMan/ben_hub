@@ -140,6 +140,7 @@ function ExpertSection() {
           <div className="expert-img-wrap">
             <img src="uploads/WhatsApp Image 2026-04-26 at 22.29.56.jpeg" alt={T.expert.name} className="expert-img" loading="lazy" decoding="async"/>
           </div>
+          <blockquote className="expert-quote expert-quote-below">{T.expert.quote}</blockquote>
         </FadeIn>
         <FadeIn delay={0.15} className="expert-info-col">
           <span className="section-label">{T.expert.label}</span>
@@ -153,7 +154,6 @@ function ExpertSection() {
               </div>
             ))}
           </div>
-          <blockquote className="expert-quote">{T.expert.quote}</blockquote>
           <p className="expert-bio">{T.expert.bio}</p>
         </FadeIn>
       </div>

@@ -14,14 +14,14 @@ const LANGUAGES = [
 
 const TRANSLATIONS = {
   ru: {
-    nav: { seats: 'Осталось {n} мест', payBtn: 'Зарегистрироваться · $19', joinBtn: 'Забронировать место' },
+    nav: { seats: 'Осталось {n} мест', payBtn: 'Зарегистрироваться', joinBtn: 'Забронировать место' },
     hero: {
       badge: 'Для предпринимателей от 10 000$ в месяц',
       h1a: 'Увеличить доход бизнеса', h1b: 'на Х2, 3, 4... — реально',
-      h1c: 'Но не через больше работы.', h1d: 'За 4 дня найдем точки роста и где ты теряешь деньги.',
+      h1c: 'Делай меньше, получай больше.', h1d: 'За 4 дня найдем точки роста и где ты теряешь деньги.',
       desc: 'Цель — настроить систему бизнеса, которая гарантированно приносит 1 000 000$. Ты недозарабатываешь не из-за рынка — а из-за отсутствия системы. Мы покажем, где именно ты теряешь деньги и как это исправить с помощью системы 4 шагов масштабирования, которые должен внедрить каждый владелец бизнеса с оборотом от 10 000$',
       practiceLine: '4 дня ПРАКТИКИ В ТВОЕМ БИЗНЕСЕ',
-      sub: 'Без теории. Без обучения. ТОЛЬКО ВНЕДРЕНИЕ И ПРАКТИКА. Найдем слепые зоны, где ты постоянно сливаешь бюджеты. Определим 1–2 точки влияния, чтобы появился результат.',
+      sub: 'ТОЛЬКО ВНЕДРЕНИЕ И ПРАКТИКА. Найдем слепые зоны, где ты постоянно сливаешь бюджеты. Определим 1–2 точки влияния, чтобы появился результат.',
       urgency: 'Успейте зарегистрироваться',
       oldPrice: '$850', price: '$19', cta: 'Забронировать место',
       ctaSub: 'Всего 1,5 часа, которые увеличат вашу прибыль уже завтра',
@@ -31,7 +31,7 @@ const TRANSLATIONS = {
     quotes: {
       q1: 'Проблема почти никогда не там, где болит. Результат падает в одном месте — причина всегда в другом.',
       q2: 'Деньги — это следствие. Система — причина.',
-      q3: 'Если бизнес держится на тебе — это не бизнес. Это нагрузка.',
+      q3: 'Если бизнес держится только на тебе, то у тебя нет бизнеса.',
       q4: 'BEN — это не про инструменты. Это про способ видеть бизнес.',
     },
     checklist: {
@@ -97,30 +97,36 @@ const TRANSLATIONS = {
     expert: {
       label: 'Главный спикер', name: 'Яна Исакова',
       role: 'Эксперт BEN · Практик по систематизации МСБ',
-      stats: [['20+','лет в бизнесе'],['150+','систематизированных компаний'],['4','контура диагностики']],
-      quote: 'Я не учу бизнесу. Я настраиваю систему, которая гарантированно приносит прибыль, экономит бюджеты, ваше время и энергию. — Исакова Яна,',
+      stats: [['20+','лет в бизнесе'],['1 500+','систематизированных компаний'],['1 млрд ₸','заработанных клиентами'],['4','контура системы']],
+      quote: 'Я не учу бизнесу. Я настраиваю систему, которая гарантированно приносит прибыль, экономит бюджеты, ваше время и энергию.',
       bio: 'Управляющий партнер BENhub, эксперт в построении систем МСБ, руководитель Евразийской Ассоциации Семейного Бизнеса, сертифицированный эксперт по управлению семейными компаниями, опыт в бизнесе 20+ лет',
     },
     testimonials: {
-      label: 'Результаты', title: 'Что говорят владельцы, прошедшие BEN',
+      label: 'Аудитория', title: 'Кому подходит BEN',
       items: [
-        { company: 'Аптечная сеть, Алматы', result: 'Кассовый разрыв −90% за 60 дней' },
-        { company: 'Стоматология, Астана', result: 'Выручка +40% без роста бюджета' },
-        { company: 'Дистрибуция, Шымкент', result: 'Вышел из операционки за 3 месяца' },
+        { company: 'Розничная торговля', icon: '🛒', pct: 22 },
+        { company: 'Производство', icon: '🏭', pct: 18 },
+        { company: 'Медицина и здоровье', icon: '🏥', pct: 15 },
+        { company: 'HoReCa и общепит', icon: '🍽️', pct: 12 },
+        { company: 'Строительство', icon: '🏗️', pct: 10 },
+        { company: 'Дистрибуция', icon: '🚚', pct: 9 },
+        { company: 'IT и сервисы', icon: '💻', pct: 8 },
+        { company: 'Другие отрасли', icon: '📊', pct: 6 },
       ],
     },
     offer: {
-      label: 'Оффер', title: 'Что вы получаете',
+      label: 'Оффер', title: 'Что вы получите за 4 дня интенсива:',
       items: [
-        { name: '4 онлайн-разбора с экспертом', price: '12 000 ₸' },
-        { name: '4 шаблона BEN (Финансы · Поток · Воронка · Структура)', price: '28 000 ₸' },
-        { name: 'Доступ к платформе и закрытой группе', price: '14 000 ₸' },
+        { name: '100 живых разборов бизнеса', price: '' },
+        { name: '4 дня работы с вашими финансами, маркетингом, продажами, командой', price: '' },
+        { name: 'Сопровождение эксперта', price: '' },
+        { name: 'Рабочие инструменты для внедрения', price: '' },
       ],
-      totalLabel: 'Общая ценность:', oldTotal: '$850',
+      totalLabel: '', oldTotal: '$850',
       price: '$19', priceNote: 'единоразово · доступ навсегда',
-      cta: 'ЗАРЕГИСТРИРОВАТЬСЯ · $19',
-      guaranteeTitle: 'Гарантия возврата',
-      guaranteeText: 'Не зашло за первые 30 минут — вернём деньги без вопросов.',
+      cta: 'ЗАРЕГИСТРИРОВАТЬСЯ',
+      guaranteeTitle: '',
+      guaranteeText: '',
     },
     fourDays: {
       title: '4 дня глубокой работы с бизнесом по блокам',
@@ -131,7 +137,7 @@ const TRANSLATIONS = {
         'Команда — почему всё держится на тебе',
       ],
       conclusion: 'Только практика и работа над твоим бизнесом',
-      result: 'За эти 4 дня ты настроишь свою бизнес-систему и чётко поймёшь точки роста',
+      result: '4 дня для настройки твоей бизнес системы',
       cta: 'Забронировать место',
     },
     faq: {
@@ -173,11 +179,11 @@ const TRANSLATIONS = {
   },
 
   kz: {
-    nav: { seats: '{n} орын қалды', payBtn: 'Тіркелу · $19', joinBtn: 'Орын брондау' },
+    nav: { seats: '{n} орын қалды', payBtn: 'Тіркелу', joinBtn: 'Орын брондау' },
     hero: {
       badge: 'Айына 10 000$ -дан жоғары кәсіпкерлерге',
       h1a: 'Бизнес табысын', h1b: 'Х2, 3, 4... өсіру — шындық',
-      h1c: 'Бірақ көп жұмыс арқылы емес.', h1d: '4 күн ішінде өсу нүктелерін табамыз.',
+      h1c: 'Аз жаса, көп ал.', h1d: '4 күн ішінде өсу нүктелерін табамыз.',
       desc: 'Мақсат — 1 000 000$ табысты кепілді қамтамасыз ететін бизнес жүйесін баптау. Сіз нарық себебінен емес — жүйенің жоқтығынан аз табасыз. Біз 10 000$ -дан жоғары айналымы бар бизнес иелері енгізуі тиіс 4 қадамдық масштабтау жүйесімен ақша қайда жоғалатынын көрсетеміз.',
       practiceLine: '4 күн СІЗДІҢ БИЗНЕСІҢІЗДЕ ТӘЖІРИБЕ',
       sub: 'Теориясыз. Оқусыз. ТЕК ЕНГІЗУ ЖӘНЕ ТӘЖІРИБЕ. Бюджетті үнемі сорып жатқан соқыр нүктелерді табамыз. Нәтиже пайда болатын 1–2 ықпал нүктесін анықтаймыз.',
@@ -190,7 +196,7 @@ const TRANSLATIONS = {
     quotes: {
       q1: 'Мәселе ауыратын жерде емес. Нәтиже бір жерде төмендейді — себеп әрқашан басқа жерде.',
       q2: 'Ақша — салдар. Жүйе — себеп.',
-      q3: 'Егер бизнес сенсіз тұрмаса — бұл бизнес емес. Бұл жүк.',
+      q3: 'Егер бизнес тек сенің арқаңда тұрса — сенің бизнесің жоқ.',
       q4: 'BEN — құралдар туралы емес. Бизнесті көру тәсілі туралы.',
     },
     checklist: {
@@ -242,30 +248,36 @@ const TRANSLATIONS = {
     expert: {
       label: 'Бас спикер', name: 'Яна Исакова',
       role: 'BEN сарапшысы · ШОБ жүйелеу практигі',
-      stats: [['20+','жыл бизнесте'],['150+','жүйеленген компания'],['4','диагностика контуры']],
-      quote: 'Мен бизнеске үйретпеймін. Мен пайданы кепілді қамтамасыз ететін, бюджеттерді, уақытыңызды және энергияңызды үнемдейтін жүйені баптаймын. — Исакова Яна,',
+      stats: [['20+','жыл бизнесте'],['1 500+','жүйеленген компания'],['1 млрд ₸','клиенттер табысы'],['4','жүйе контуры']],
+      quote: 'Мен бизнеске үйретпеймін. Мен пайданы кепілді қамтамасыз ететін, бюджеттерді, уақытыңызды және энергияңызды үнемдейтін жүйені баптаймын.',
       bio: 'BENhub басқарушы серіктесі, ШОБ жүйелерін құру сарапшысы, Еуразиялық Отбасылық Бизнес Ассоциациясының жетекшісі, отбасылық компанияларды басқару жөніндегі сертификатталған сарапшы, бизнестегі тәжірибе 20+ жыл',
     },
     testimonials: {
-      label: 'Нәтижелер', title: 'BEN-нен өткен иелер не айтады',
+      label: 'Аудитория', title: 'BEN кімге сәйкес',
       items: [
-        { company: 'Дәріхана желісі, Алматы', result: 'Кассалық алшақтық −90% 60 күнде' },
-        { company: 'Стоматология, Астана', result: 'Бюджетсіз табыс +40%' },
-        { company: 'Дистрибуция, Шымкент', result: '3 айда операционкадан шықты' },
+        { company: 'Бөлшек сауда', icon: '🛒', pct: 22 },
+        { company: 'Өндіріс', icon: '🏭', pct: 18 },
+        { company: 'Медицина', icon: '🏥', pct: 15 },
+        { company: 'HoReCa', icon: '🍽️', pct: 12 },
+        { company: 'Құрылыс', icon: '🏗️', pct: 10 },
+        { company: 'Дистрибуция', icon: '🚚', pct: 9 },
+        { company: 'IT', icon: '💻', pct: 8 },
+        { company: 'Басқа', icon: '📊', pct: 6 },
       ],
     },
     offer: {
-      label: 'Ұсыныс', title: 'Не аласыз',
+      label: 'Ұсыныс', title: '4 күн интенсивте не аласыз:',
       items: [
-        { name: '4 онлайн-талдау + сарапшы', price: '12 000 ₸' },
-        { name: 'BEN-нің 4 үлгісі', price: '28 000 ₸' },
-        { name: 'Платформа мен жабық топқа кіру', price: '14 000 ₸' },
+        { name: '100 тікелей бизнес талдауы', price: '' },
+        { name: '4 күн қаржы, маркетинг, сату, командамен жұмыс', price: '' },
+        { name: 'Сарапшы қолдауы', price: '' },
+        { name: 'Енгізуге арналған жұмыс құралдары', price: '' },
       ],
-      totalLabel: 'Жалпы құны:', oldTotal: '$850',
+      totalLabel: '', oldTotal: '$850',
       price: '$19', priceNote: 'бір рет · мәңгі кіру',
-      cta: 'ТІРКЕЛУ · $19',
-      guaranteeTitle: 'Қайтару кепілдігі',
-      guaranteeText: 'Алғашқы 30 минутта ұнамаса — сұраусыз ақшаны қайтарамыз.',
+      cta: 'ТІРКЕЛУ',
+      guaranteeTitle: '',
+      guaranteeText: '',
     },
     fourDays: {
       title: '4 күн бизнеспен тереңдетілген жұмыс',
@@ -276,7 +288,7 @@ const TRANSLATIONS = {
         'Команда — неге бәрі сізге тіреледі',
       ],
       conclusion: 'Тек тәжірибе және сіздің бизнесіңіз бойынша жұмыс',
-      result: 'Осы 4 күн ішінде сіз бизнес-жүйеңізді баптайсыз және өсу нүктелерін нақты түсінесіз',
+      result: 'Сіздің бизнес жүйеңізді баптауға арналған 4 күн',
       cta: 'Орын брондау',
     },
     faq: {
@@ -318,14 +330,14 @@ const TRANSLATIONS = {
   },
 
   en: {
-    nav: { seats: '{n} seats left', payBtn: 'Register · $19', joinBtn: 'Reserve a seat' },
+    nav: { seats: '{n} seats left', payBtn: 'Register', joinBtn: 'Reserve a seat' },
     hero: {
       badge: 'For entrepreneurs with $10,000+ monthly revenue',
       h1a: 'Scale your business revenue', h1b: '2x, 3x, 4x... — it\'s real',
-      h1c: 'Not by working harder.', h1d: 'In 4 days we\'ll find your growth points and where you\'re losing money.',
+      h1c: 'Do less, earn more.', h1d: 'In 4 days we\'ll find your growth points and where you\'re losing money.',
       desc: 'The goal — set up a business system that guarantees $1,000,000 in revenue. You\'re underearning not because of the market — but because of a missing system. We\'ll show you exactly where you\'re losing money and how to fix it using a 4-step scaling system every business owner with $10,000+ revenue must implement.',
       practiceLine: '4 DAYS OF PRACTICE IN YOUR BUSINESS',
-      sub: 'No theory. No lectures. ONLY IMPLEMENTATION AND PRACTICE. We\'ll find blind spots where you\'re constantly burning budgets. We\'ll identify 1–2 leverage points so results finally appear.',
+      sub: 'ONLY IMPLEMENTATION AND PRACTICE. We\'ll find blind spots where you\'re constantly burning budgets. We\'ll identify 1–2 leverage points so results finally appear.',
       urgency: 'Register now',
       oldPrice: '$850', price: '$19', cta: 'Reserve a seat',
       ctaSub: 'Just 1.5 hours that will increase your profit tomorrow',
@@ -335,7 +347,7 @@ const TRANSLATIONS = {
     quotes: {
       q1: 'The problem is almost never where it hurts. Results drop in one place — the cause is always somewhere else.',
       q2: 'Money is the consequence. System is the cause.',
-      q3: 'If your business depends on you — it\'s not a business. It\'s a burden.',
+      q3: 'If your business only runs because of you, you don\'t have a business.',
       q4: 'BEN isn\'t about tools. It\'s about how you see your business.',
     },
     checklist: {
@@ -387,30 +399,36 @@ const TRANSLATIONS = {
     expert: {
       label: 'Lead Speaker', name: 'Yana Isakova',
       role: 'BEN Expert · SMB Systems Practitioner',
-      stats: [['20+','years in business'],['150+','systematised companies'],['4','diagnostic loops']],
-      quote: 'I don\'t teach business. I configure a system that guarantees profit, saves budgets, your time, and energy. — Yana Isakova,',
+      stats: [['20+','years in business'],['1 500+','systematised companies'],['$1B+','earned by clients'],['4','system loops']],
+      quote: 'I don\'t teach business. I configure a system that guarantees profit, saves budgets, your time, and energy.',
       bio: 'Managing Partner of BENhub, expert in building SMB systems, Head of the Eurasian Family Business Association, certified family business management expert, 20+ years of business experience',
     },
     testimonials: {
-      label: 'Results', title: 'What owners who completed BEN say',
+      label: 'Audience', title: 'Who BEN is for',
       items: [
-        { company: 'Pharmacy chain, Almaty', result: 'Cash gap −90% in 60 days' },
-        { company: 'Dental clinic, Astana', result: 'Revenue +40% without budget increase' },
-        { company: 'Distribution, Shymkent', result: 'Owner exited operations in 3 months' },
+        { company: 'Retail', icon: '🛒', pct: 22 },
+        { company: 'Manufacturing', icon: '🏭', pct: 18 },
+        { company: 'Healthcare', icon: '🏥', pct: 15 },
+        { company: 'HoReCa', icon: '🍽️', pct: 12 },
+        { company: 'Construction', icon: '🏗️', pct: 10 },
+        { company: 'Distribution', icon: '🚚', pct: 9 },
+        { company: 'IT & Services', icon: '💻', pct: 8 },
+        { company: 'Other', icon: '📊', pct: 6 },
       ],
     },
     offer: {
-      label: 'Offer', title: 'What you get',
+      label: 'Offer', title: 'What you get in 4 days:',
       items: [
-        { name: '4 live expert diagnostics', price: '₸12,000' },
-        { name: '4 BEN templates (Finance · Flow · Funnel · Structure)', price: '₸28,000' },
-        { name: 'Platform access + private group', price: '₸14,000' },
+        { name: '100 live business reviews', price: '' },
+        { name: '4 days working on your finances, marketing, sales, and team', price: '' },
+        { name: 'Expert coaching & support', price: '' },
+        { name: 'Ready-to-use business tools', price: '' },
       ],
-      totalLabel: 'Total value:', oldTotal: '$850',
-      price: '₸4,800', priceNote: 'one-time · lifetime access',
-      cta: 'PAY ₸4,800',
-      guaranteeTitle: 'Money-back guarantee',
-      guaranteeText: 'Didn\'t click in the first 30 minutes? Full refund, no questions asked.',
+      totalLabel: '', oldTotal: '$850',
+      price: '$19', priceNote: 'one-time · lifetime access',
+      cta: 'REGISTER NOW',
+      guaranteeTitle: '',
+      guaranteeText: '',
     },
     fourDays: {
       title: '4 days of deep work on your business by blocks',
@@ -421,7 +439,7 @@ const TRANSLATIONS = {
         'Team — why everything depends on you',
       ],
       conclusion: 'Only practice and real work on your business',
-      result: 'In these 4 days you\'ll configure your business system and clearly see your growth points',
+      result: '4 days to configure your business system',
       cta: 'Reserve a seat',
     },
     faq: {
@@ -463,11 +481,11 @@ const TRANSLATIONS = {
   },
 
   uz: {
-    nav: { seats: '{n} joy qoldi', payBtn: "Ro'yxatdan o'tish · $19", joinBtn: 'Joy band qilish' },
+    nav: { seats: '{n} joy qoldi', payBtn: "Ro'yxatdan o'tish", joinBtn: 'Joy band qilish' },
     hero: {
       badge: "Oylik daromadi 10 000$ dan yuqori tadbirkorlar uchun",
       h1a: 'Biznes daromadini', h1b: 'X2, 3, 4... ga oshirish — haqiqat',
-      h1c: "Ko'proq ishlash orqali emas.", h1d: "4 kunda o'sish nuqtalarini va pul yo'qotayotgan joylarni topamiz.",
+      h1c: "Kamroq qil, ko'proq ol.", h1d: "4 kunda o'sish nuqtalarini va pul yo'qotayotgan joylarni topamiz.",
       desc: "Maqsad — 1 000 000$ daromadni kafolatli ta'minlovchi biznes tizimini sozlash. Siz bozor sababli emas — tizim yo'qligi sababli kam topasiz. 10 000$ dan yuqori aylanmali biznes egalari joriy etishi kerak bo'lgan 4 qadam miqyoslash tizimi yordamida pul qayerda yo'qolishini ko'rsatamiz.",
       practiceLine: "4 KUN SIZNING BIZNESINGIZDA AMALIYOT",
       sub: "Nazariyasiz. O'quvsiz. FAQAT JORIY ETISH VA AMALIYOT. Doimiy byudjetingizni sarflab turadigan ko'r nuqtalarni topamiz. Natija paydo bo'lishi uchun 1–2 ta ta'sir nuqtasini aniqlaymiz.",
@@ -532,7 +550,7 @@ const TRANSLATIONS = {
     expert: {
       label: 'Bosh spiker', name: 'Yana Isakova',
       role: "BEN Eksperti · KXB tizimlashtirish amaliyotchisi",
-      stats: [["20+","yil biznesda"],["150+","tizimli kompaniyalar"],["4","diagnostika konturi"]],
+      stats: [["20+","yil biznesda"],["1 500+","tizimli kompaniyalar"],["1 mlrd ₸","mijozlar daromadi"],["4","tizim konturi"]],
       quote: "Men biznesga o'rgatmayman. Men foydani kafolatli ta'minlaydigan, byudjetlarni, vaqtingizni va energiyangizni tejovchi tizimni sozlayman. — Isakova Yana,",
       bio: "BENhub boshqaruvchi sherigi, KXB tizimlari qurishda ekspert, Yevrosiyo Oilaviy Biznes Assotsiatsiyasi rahbari, oilaviy kompaniyalarni boshqarish bo'yicha sertifikatlangan ekspert, biznesda 20+ yillik tajriba",
     },
@@ -608,11 +626,11 @@ const TRANSLATIONS = {
   },
 
   uk: {
-    nav: { seats: 'Залишилось {n} місць', payBtn: 'Зареєструватись · $19', joinBtn: 'Забронювати місце' },
+    nav: { seats: 'Залишилось {n} місць', payBtn: 'Зареєструватись', joinBtn: 'Забронювати місце' },
     hero: {
       badge: 'Для підприємців від $10 000 на місяць',
       h1a: 'Збільшити дохід бізнесу', h1b: 'на Х2, 3, 4... — реально',
-      h1c: 'Але не через більше роботи.', h1d: 'За 4 дні знайдемо точки зростання і де ти втрачаєш гроші.',
+      h1c: 'Роби менше, заробляй більше.', h1d: 'За 4 дні знайдемо точки зростання і де ти втрачаєш гроші.',
       desc: 'Мета — налаштувати систему бізнесу, яка гарантовано приносить 1 000 000$. Ти недозаробляєш не через ринок — а через відсутність системи. Ми покажемо, де саме ти втрачаєш гроші і як це виправити за допомогою системи 4 кроків масштабування, які повинен впровадити кожен власник бізнесу з оборотом від $10 000.',
       practiceLine: '4 дні ПРАКТИКИ У ТВОЄМУ БІЗНЕСІ',
       sub: 'Без теорії. Без навчання. ТІЛЬКИ ВПРОВАДЖЕННЯ І ПРАКТИКА. Знайдемо сліпі зони, де ти постійно зливаєш бюджети. Визначимо 1–2 точки впливу, щоб з\'явився результат.',
@@ -677,7 +695,7 @@ const TRANSLATIONS = {
     expert: {
       label: 'Головний спікер', name: 'Яна Ісакова',
       role: 'Експерт BEN · Практик систематизації МСБ',
-      stats: [['20+','років у бізнесі'],['150+','систематизованих компаній'],['4','контури діагностики']],
+      stats: [['20+','років у бізнесі'],['1 500+','систематизованих компаній'],['1 млрд ₸','зароблено клієнтами'],['4','контури системи']],
       quote: 'Я не вчу бізнесу. Я налаштовую систему, яка гарантовано приносить прибуток, економить бюджети, ваш час і енергію. — Ісакова Яна,',
       bio: 'Керуючий партнер BENhub, експерт у побудові систем МСБ, керівник Євразійської Асоціації Сімейного Бізнесу, сертифікований експерт з управління сімейними компаніями, досвід у бізнесі 20+ років',
     },
@@ -753,11 +771,11 @@ const TRANSLATIONS = {
   },
 
   de: {
-    nav: { seats: 'Noch {n} Plätze', payBtn: 'Registrieren · $19', joinBtn: 'Platz sichern' },
+    nav: { seats: 'Noch {n} Plätze', payBtn: 'Registrieren', joinBtn: 'Platz sichern' },
     hero: {
       badge: 'Für Unternehmer mit $10.000+ Monatsumsatz',
       h1a: 'Den Unternehmensgewinn', h1b: 'um 2x, 3x, 4x steigern — das ist real',
-      h1c: 'Nicht durch mehr Arbeit.', h1d: 'In 4 Tagen finden wir Wachstumspunkte und wo du Geld verlierst.',
+      h1c: 'Weniger tun, mehr verdienen.', h1d: 'In 4 Tagen finden wir Wachstumspunkte und wo du Geld verlierst.',
       desc: 'Ziel — ein Unternehmenssystem aufzubauen, das garantiert 1.000.000 $ einbringt. Du verdienst nicht weniger wegen des Markts — sondern wegen fehlender Systeme. Wir zeigen dir, wo genau du Geld verlierst und wie du es mit einem 4-Schritte-Skalierungssystem behebst.',
       practiceLine: '4 TAGE PRAXIS IN DEINEM UNTERNEHMEN',
       sub: 'Keine Theorie. Keine Kurse. NUR UMSETZUNG UND PRAXIS. Wir finden blinde Flecken, wo du kontinuierlich Budget verbrennt. Wir identifizieren 1–2 Hebelpunkte, damit endlich Ergebnisse erscheinen.',
@@ -822,8 +840,8 @@ const TRANSLATIONS = {
     expert: {
       label: 'Hauptrednerin', name: 'Yana Isakova',
       role: 'BEN-Expertin · KMU-Systematisierungspraktikerin',
-      stats: [['20+','Jahre im Unternehmertum'],['150+','systematisierte Unternehmen'],['4','Diagnosekreise']],
-      quote: 'Ich lehre kein Business. Ich konfiguriere ein System, das garantiert Gewinne erzielt, Budgets spart und Ihre Zeit und Energie schont. — Yana Isakova,',
+      stats: [['20+','Jahre im Unternehmertum'],['1 500+','systematisierte Unternehmen'],['1 Mrd ₸','Kundeneinnahmen'],['4','Systemkreise']],
+      quote: 'Ich lehre kein Business. Ich konfiguriere ein System, das garantiert Gewinne erzielt, Budgets spart und Ihre Zeit und Energie schont.',
       bio: 'Geschäftsführende Partnerin von BENhub, Expertin für KMU-Systemaufbau, Leiterin der Eurasischen Familienunternehmens-Vereinigung, zertifizierte Expertin für Familienunternehmen, über 20 Jahre Unternehmenserfahrung',
     },
     testimonials: {
@@ -898,11 +916,11 @@ const TRANSLATIONS = {
   },
 
   tr: {
-    nav: { seats: '{n} yer kaldı', payBtn: 'Kayıt ol · $19', joinBtn: 'Yer rezerve et' },
+    nav: { seats: '{n} yer kaldı', payBtn: 'Kayıt ol', joinBtn: 'Yer rezerve et' },
     hero: {
       badge: 'Aylık $10.000+ geliri olan girişimciler için',
       h1a: 'İşletme gelirini', h1b: '2x, 3x, 4x artırmak — mümkün',
-      h1c: 'Daha fazla çalışarak değil.', h1d: '4 günde büyüme noktalarını ve para kaybettiğin yerleri buluruz.',
+      h1c: 'Az çalış, çok kazan.', h1d: '4 günde büyüme noktalarını ve para kaybettiğin yerleri buluruz.',
       desc: 'Hedef — 1.000.000 $ geliri garanti eden bir iş sistemi kurmak. Az kazanıyorsun çünkü pazar değil — sistem eksikliği yüzünden. $10.000+ cirolu her işletme sahibinin uygulaması gereken 4 adımlı ölçekleme sistemi ile paranın nerede kaybolduğunu göstereceğiz.',
       practiceLine: '4 GÜN İŞLETMENDE UYGULAMA',
       sub: 'Teori yok. Kurs yok. SADECE UYGULAMA VE PRATİK. Bütçeni sürekli harcayan kör noktaları buluruz. Sonuç çıkması için 1–2 kaldıraç noktası belirleriz.',
@@ -967,7 +985,7 @@ const TRANSLATIONS = {
     expert: {
       label: 'Baş Konuşmacı', name: 'Yana İsakova',
       role: 'BEN Uzmanı · KOBİ Sistemleştirme Pratisyeni',
-      stats: [['20+','yıl iş hayatında'],['150+','sistematize edilmiş şirket'],['4','tanı döngüsü']],
+      stats: [['20+','yıl iş hayatında'],['1 500+','sistematize edilmiş şirket'],['1 mlr ₸','müşteri geliri'],['4','sistem döngüsü']],
       quote: 'İş öğretmiyorum. Kârı garantileyen, bütçeleri, zamanınızı ve enerjinizi koruyan bir sistem kuruyorum. — İsakova Yana,',
       bio: 'BENhub Yönetici Ortağı, KOBİ sistemleri kurma uzmanı, Avrasya Aile Şirketi Derneği Başkanı, aile şirketi yönetimi sertifikalı uzmanı, 20+ yıl iş deneyimi',
     },
@@ -1043,11 +1061,11 @@ const TRANSLATIONS = {
   },
 
   kg: {
-    nav: { seats: '{n} орун калды', payBtn: 'Катталуу · $19', joinBtn: 'Орун брондоо' },
+    nav: { seats: '{n} орун калды', payBtn: 'Катталуу', joinBtn: 'Орун брондоо' },
     hero: {
       badge: 'Айына $10 000 дан жогору ишкерлер үчүн',
       h1a: 'Бизнес кирешени', h1b: 'Х2, 3, 4... өстүрүү — чындык',
-      h1c: 'Көбүрөөк иш аркылуу эмес.', h1d: '4 күндө өсүү чекиттерин жана акча жоготуп жаткан жерлерди табабыз.',
+      h1c: 'Аз иште, көп ал.', h1d: '4 күндө өсүү чекиттерин жана акча жоготуп жаткан жерлерди табабыз.',
       desc: 'Максат — 1 000 000$ кирешени кепилдүү камсыз кылуучу бизнес системасын орнотуу. Сен аз табасыңбы, анткени нарык кемчил эмес — система жок. 10 000$ дан жогору айланымдуу бизнес ээлери киргизиши керек болгон 4 кадамдык масштабдоо системасы менен акча кайда жоголорун көрсөтөбүз.',
       practiceLine: '4 КҮН СЕНИН БИЗНЕСИҢДЕ ТАЖРЫЙБА',
       sub: 'Теориясыз. Окуусуз. ТЕК КИРГИЗҮҮ ЖАНА ТАЖРЫЙБА. Бюджетти дайыма жеп жаткан көр нүктелерди табабыз. Натыйжа пайда болушу үчүн 1–2 таасир чекитти аныктайбыз.',
@@ -1112,8 +1130,8 @@ const TRANSLATIONS = {
     expert: {
       label: 'Башкы спикер', name: 'Яна Исакова',
       role: 'BEN эксперти · КБИ системалаштыруу практиги',
-      stats: [['20+','жыл бизнесте'],['150+','системаланган компания'],['4','диагностика контуру']],
-      quote: 'Мен бизнеске үйрөтпөйм. Мен пайданы кепилдүү камсыз кылуучу, бюджеттерди, убакытыңызды жана энергияңызды үнөмдөөчү системаны орнотом. — Исакова Яна,',
+      stats: [['20+','жыл бизнесте'],['1 500+','системаланган компания'],['1 млрд ₸','кардарлар табысы'],['4','система контуру']],
+      quote: 'Мен бизнеске үйрөтпөйм. Мен пайданы кепилдүү камсыз кылуучу, бюджеттерди, убакытыңызды жана энергияңызды үнөмдөөчү системаны орнотом.',
       bio: 'BENhub башкаруучу өнөктөшү, КБИ системаларын куруу боюнча эксперт, Евразия Үй-бүлөлүк Бизнес Ассоциациясынын жетекчиси, үй-бүлөлүк компанияларды башкаруу боюнча сертификатталган эксперт, бизнесте 20+ жылдык тажрыйба',
     },
     testimonials: {
@@ -1188,11 +1206,11 @@ const TRANSLATIONS = {
   },
 
   zh: {
-    nav: { seats: '剩余 {n} 个名额', payBtn: '注册 · $19', joinBtn: '预约名额' },
+    nav: { seats: '剩余 {n} 个名额', payBtn: '注册', joinBtn: '预约名额' },
     hero: {
       badge: '适合月收入$10,000以上的企业家',
       h1a: '将企业收入', h1b: '提升2倍、3倍、4倍... — 这是现实',
-      h1c: '不是通过更多工作。', h1d: '4天内找到增长点和资金流失的地方。',
+      h1c: '少做多得。', h1d: '4天内找到增长点和资金流失的地方。',
       desc: '目标 — 建立一个能保证100万美元收入的企业系统。你收入不高不是因为市场，而是因为缺乏系统。我们将展示你在哪里亏损，以及如何通过每位月收入$10,000以上的企业主都应实施的4步扩张系统来解决。',
       practiceLine: '4天深入实践你的业务',
       sub: '无理论。无课程。只有落地实施和实践。找到你持续浪费预算的盲点。确定1–2个关键杠杆点，让结果真正出现。',
@@ -1257,7 +1275,7 @@ const TRANSLATIONS = {
     expert: {
       label: '主讲嘉宾', name: 'Yana Isakova',
       role: 'BEN专家 · 中小企业系统化实践者',
-      stats: [['20+','年商业经验'],['150+','系统化公司'],['4','诊断回路']],
+      stats: [['20+','年商业经验'],['1 500+','系统化公司'],['10亿₸','客户收益'],['4','系统环路']],
       quote: '我不教商业。我搭建保证盈利、节省预算、时间和精力的系统。— Isakova Yana，',
       bio: 'BENhub执行合伙人，中小企业系统构建专家，欧亚家族企业协会主席，家族企业管理认证专家，20+年业务经验',
     },
