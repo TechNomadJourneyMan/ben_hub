@@ -197,9 +197,7 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; back
 .hero-block-cta { }
 
 /* Hero right — photo card */
-.hero-right { position: relative; }
-.hero-right-anim { animation: heroRightIn .7s .15s cubic-bezier(.22,1,.36,1) both; }
-@keyframes heroRightIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+.hero-right { position: relative; opacity: 1; }
 .hero-right-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--shadow); position: relative; }
 .hero-photo-wrap { position: relative; }
 .hero-photo { width: 100%; aspect-ratio: 4/4.4; object-fit: cover; object-position: center top; display: block; }
@@ -552,18 +550,20 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; back
   .header-actions { gap: 6px; }
 
   /* Hero */
-  .hero-section { padding: 88px 0 48px; }
-  .hero-grid { grid-template-columns: 1fr; gap: 24px; }
-  .hero-right { order: -1; }
-  .hero-h1 { font-size: clamp(26px, 7.5vw, 36px); margin-bottom: 14px; }
-  .hero-sub { font-size: 15px; margin-bottom: 18px; }
-  .hero-bullets { gap: 8px; margin-bottom: 20px; }
-  .hero-bullets li { font-size: 14px; }
+  .hero-section { padding: 76px 0 40px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 20px; }
+  .hero-right { order: -1; max-width: 320px; margin: 0 auto; width: 100%; }
+  .hero-photo { aspect-ratio: 4/3.5; }
+  .hero-h1 { font-size: clamp(24px, 7vw, 34px); margin-bottom: 12px; }
+  .hero-sub { font-size: 15px; margin-bottom: 16px; }
+  .hero-badge { font-size: 12px; }
   .hero-btn { width: 100%; justify-content: center; }
-  .hero-price-main { font-size: 24px; }
-  .hero-logos { margin-top: 20px; gap: 8px; }
-  .hero-timer-cta-row { flex-direction: column; align-items: stretch; }
-  .hero-timer-cta-row .final-timer-row { justify-content: center; }
+  .hero-logos { margin-top: 16px; gap: 6px; flex-direction: column; align-items: flex-start; }
+  .hero-timer-cta-row { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero-timer-cta-row .final-timer-row { justify-content: center; margin-bottom: 0; }
+  .hero-timer-cta-row .final-timer-block { padding: 8px 12px; min-width: 52px; }
+  .hero-timer-cta-row .final-timer-num { font-size: 22px; }
+  .hero-cta-sub { font-size: 14px; text-align: center; }
   .hero-logos-all-box { padding: 20px; }
   /* Scheme card mobile */
   .hero-block-hook { padding-bottom: 20px; margin-bottom: 20px; }
