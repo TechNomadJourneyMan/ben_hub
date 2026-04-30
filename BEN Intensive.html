@@ -593,24 +593,49 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; back
   .comp-col-other { background: transparent; }
   .comp-col-ben { background: transparent; border-left: none; border-top: 1px solid color-mix(in srgb, var(--green) 25%, transparent); padding-top: 6px !important; }
 
+  /* Hero elements cap on mobile */
+  .hero-badge { font-size: 13px; padding: 5px 12px; }
+  .hero-cta-sub { font-size: 14px; }
+
+  /* BenSystem — 1 col on mobile, readable result badge */
+  .bensys-grid { grid-template-columns: 1fr; gap: 10px; }
+  .bensys-card { flex-direction: row; align-items: center; text-align: left; padding: 16px 18px; gap: 14px; }
+  .bensys-icon { flex-shrink: 0; }
+  .bensys-label { font-size: 17px; }
+  .bensys-sub { font-size: 12px; }
+  .bensys-result { font-size: 12px; margin-top: 2px; }
+
+  /* Roadmap — vertical list on mobile */
+  .roadmap-chain { flex-direction: column; align-items: center; overflow-x: visible; padding: 24px 0; gap: 0; }
+  .roadmap-node { flex-direction: row; width: 100%; max-width: 320px; align-items: center; gap: 14px; }
+  .roadmap-node-label { font-size: 14px; min-height: unset; text-align: left; padding: 0; }
+  .roadmap-node-label.top { order: 1; margin-bottom: 0; }
+  .roadmap-node-label.bottom { order: 1; margin-top: 0; }
+  .roadmap-node-label--day { display: none; }
+  .roadmap-connector { flex-direction: column; min-width: unset; max-width: unset; width: 3px; height: 28px; margin: 4px 0 4px 28px; align-items: center; justify-content: center; }
+  .roadmap-line { width: 3px; height: 100%; }
+  .roadmap-arrow { transform: rotate(90deg); display: block; }
+  .roadmap-circle { width: 56px; height: 56px; flex-shrink: 0; }
+  .roadmap-result-node { flex-direction: row; max-width: 320px; gap: 14px; margin-left: 0; margin-top: 4px; }
+  .roadmap-result-label { text-align: left; min-height: unset; margin-top: 0; }
+  .roadmap-big-num { font-size: 80px; }
+
   /* Expert */
   .prog-scheme { grid-template-columns: 1fr; }
   .prog-scheme-photo-wrap { max-height: 320px; overflow: hidden; }
   .prog-scheme-photo { aspect-ratio: 4/3; }
   .prog-scheme-cards { grid-template-columns: 1fr; }
-  .roadmap-chain { justify-content: flex-start; padding: 40px 0; }
-  .roadmap-node { width: 100px; }
-  .roadmap-node-label { font-size: calc(11px * var(--fs)); min-height: 36px; }
-  .roadmap-circle { width: 60px; height: 60px; }
-  .roadmap-big-num { font-size: 80px; }
   .expert-grid { grid-template-columns: 1fr; gap: 24px; }
-  .expert-photo-col { order: -1; max-width: 260px; margin: 0 auto; }
+  .expert-photo-col { order: -1; max-width: 280px; margin: 0 auto; }
   .expert-name { font-size: 26px; }
   .expert-role { font-size: 14px; margin-bottom: 18px; }
   .expert-stats-row { gap: 8px; }
   .expert-stat { padding: 12px; }
   .expert-stat-val { font-size: 22px; }
   .expert-quote { font-size: 15px; }
+
+  /* Offer price note cap */
+  .offer-price-note { font-size: 14px; }
 
   /* Industries chart — stack on mobile */
   .industries-wrap { flex-direction: column; gap: 32px; }
