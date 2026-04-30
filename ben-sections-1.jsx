@@ -29,10 +29,14 @@ function StickyHeaderV3({ onCTA, theme, onToggleTheme }) {
   );
 }
 
+const HERO_COMPANIES = ['Рукавичка','МИР','cit.rus','Оптималь','X-CENTRIC','TARGET','GALAX','FLAMINGO','РеалМаркет','VOLTA','ЦЕМСИС','i-markt','GlobaxOil','ТНПЗ','ARGTEC','xenium','TALKER','Русский Бильярд','VBNK','consul','СПЕКТР','ТСБ','africa','DEGO','ГЛОНАСС'];
+
 function HeroSectionV3({ onCTA }) {
   const { T, t } = useLang();
   const countdown = useCountdown();
   const pad = n => String(n).padStart(2, '0');
+  const [showAll, setShowAll] = React.useState(false);
+  const ticker = [...HERO_COMPANIES, ...HERO_COMPANIES];
   return (
     <section id="hero" className="hero-section">
       <div className="ben-container">
@@ -54,15 +58,27 @@ function HeroSectionV3({ onCTA }) {
             <div className="hero-block hero-block-cta">
               <FadeIn delay={0.22}>
                 <div className="hero-cta-block">
-                  <button onClick={onCTA} className="btn-orange hero-btn hero-btn-xl">{T.hero.cta} <Icons.ArrowRight/></button>
+                  <div className="hero-timer-cta-row">
+                    <div className="final-timer-row">
+                      {[['д',countdown.d],['ч',countdown.h],['мин',countdown.m],['сек',countdown.s]].map(([l,v],i)=>(
+                        <div key={i} className="final-timer-block">
+                          <span className="final-timer-num">{pad(v)}</span>
+                          <span className="final-timer-lbl">{l}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <button onClick={onCTA} className="btn-orange hero-btn hero-btn-xl">{T.hero.cta} <Icons.ArrowRight/></button>
+                  </div>
                   <span className="hero-cta-sub">{T.hero.ctaSub}</span>
                 </div>
               </FadeIn>
               <FadeIn delay={0.30}>
                 <div className="hero-logos">
                   <span className="hero-logos-label">{T.hero.trustedBy}</span>
-                  <div className="hero-logos-row">
-                    {T.industries.map((ind, i) => <span key={i} className="hero-logo-pill">{ind}</span>)}
+                  <div className="hero-logos-ticker" onClick={() => setShowAll(true)} title="Нажмите, чтобы увидеть все компании">
+                    <div className="hero-logos-track">
+                      {ticker.map((c, i) => <span key={i} className="hero-logo-chip">{c}</span>)}
+                    </div>
                   </div>
                 </div>
               </FadeIn>
@@ -93,6 +109,17 @@ function HeroSectionV3({ onCTA }) {
           </div>
         </div>
       </div>
+      {showAll && (
+        <div className="hero-logos-all-overlay" onClick={() => setShowAll(false)}>
+          <div className="hero-logos-all-box" onClick={e => e.stopPropagation()}>
+            <div className="hero-logos-all-title">Нам доверяют 1 500+ компаний</div>
+            <div className="hero-logos-all-grid">
+              {HERO_COMPANIES.map((c, i) => <span key={i} className="hero-logo-chip">{c}</span>)}
+            </div>
+            <button className="hero-logos-all-close" onClick={() => setShowAll(false)}>✕ Закрыть</button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
