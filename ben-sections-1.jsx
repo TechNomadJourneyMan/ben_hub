@@ -19,6 +19,7 @@ function StickyHeaderV3({ onCTA, theme, onToggleTheme }) {
         </div>
         <div className="header-actions">
           <LangSwitcher/>
+          <FontSizeControl/>
           <ThemeToggleBtn theme={theme} onToggle={onToggleTheme}/>
           <button onClick={onCTA} className="btn-ghost btn-sm">{T.nav.joinBtn}</button>
           <button onClick={onCTA} className="btn-orange btn-sm">{T.nav.payBtn}</button>
