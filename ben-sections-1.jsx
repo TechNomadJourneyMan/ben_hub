@@ -84,8 +84,7 @@ function HeroSectionV3({ onCTA }) {
               </FadeIn>
             </div>
           </div>
-          <div className="hero-right">
-            <FadeIn delay={0.2}>
+          <div className="hero-right hero-right-anim">
               <div className="hero-right-card">
                 <div className="hero-photo-wrap">
                   <img src="uploads/WhatsApp Image 2026-04-26 at 22.29.56.jpeg" alt={T.expert.name} className="hero-photo"/>
@@ -105,7 +104,6 @@ function HeroSectionV3({ onCTA }) {
                   </div>
                 </div>
               </div>
-            </FadeIn>
           </div>
         </div>
       </div>

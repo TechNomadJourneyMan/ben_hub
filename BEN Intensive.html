@@ -198,6 +198,8 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; back
 
 /* Hero right — photo card */
 .hero-right { position: relative; }
+.hero-right-anim { animation: heroRightIn .7s .15s cubic-bezier(.22,1,.36,1) both; }
+@keyframes heroRightIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 .hero-right-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--shadow); position: relative; }
 .hero-photo-wrap { position: relative; }
 .hero-photo { width: 100%; aspect-ratio: 4/4.4; object-fit: cover; object-position: center top; display: block; }
