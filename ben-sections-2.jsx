@@ -86,7 +86,6 @@ function BenRoadmapSection() {
       <div className="ben-container">
         <FadeIn>
           <div className="roadmap-header">
-            <div className="roadmap-big-num">4</div>
             <div className="roadmap-header-body">
               <h2 className="roadmap-title">{T.fourDays.title}</h2>
               <p className="roadmap-sub">{T.fourDays.conclusion}</p>

@@ -168,7 +168,7 @@ function ParticipantOfferBlock() {
         <FadeIn>
           <div className="participant-offer-card">
             <div className="participant-offer-img-wrap">
-              <img src="uploads/gift-client-base.png" alt={T.participantOffer.desc} className="participant-offer-img" loading="lazy"/>
+              <img src="uploads/ben-offer-illustration.jpg" alt={T.participantOffer.desc} className="participant-offer-img" loading="lazy"/>
             </div>
             <div className="participant-offer-body">
               <div className="participant-offer-badge"><Icons.Gift/> {T.participantOffer.title}</div>
